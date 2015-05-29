@@ -46,15 +46,15 @@ void ofApp::update() {
         colors.push_back(vertex.z) ; //push the value of z onto the array of ofFloatColor
         mesh.addColors(colors) ; //add the array colors to the mesh
         
-//        if(colorPressed) {
-//            mesh.clearColors() ;
-//            if(keyType == 'r') {
-//                mesh.addColor(ofColor(255,0,0)) ;
-//            }
-//        }
+        if(colorPressed) {
+            mesh.clearColors() ;
+            if(keyType == 'r') {
+                mesh.addColor(ofColor(255,0,0)) ;
+            }
+        }
 //        mesh.setColor(i, ofFloatColor(0.0, 1.0, 1.0)) ;
         mesh.setVertex(i, vertex) ; //set the values of the vertex at position i
-//        colors.clear() ; //clear the array of colors
+        colors.clear() ; //clear the array of colors
 
     }
     mesh.enableNormals() ;
